@@ -1,25 +1,28 @@
 import api from "./../../api/api.js"
 
 async function login(name, passwd){
-    var res = await api.login({
+    /*var res = await api.login({
         'name': name,
         'passwd': passwd
-    })
-    if(res['code']==200){
+    })*/
+    //if(res['code']==200){
+    if(1){
         alert("登录成功")
-        localStorage.setItem('user', JSON.stringify(res['data']))
+        //localStorage.setItem('user', JSON.stringify(res['data']))
         goto(-1)
     }
 }
 
 async function register(name, passwd){
-    var res = await api.register({
+    /*var res = await api.register({
         'name': name,
         'passwd': passwd
-    })
-    if(res['code']==200){
+    })*/
+    //if(res['code']==200){
+    if(1){
         alert("注册成功")
     }
+    switch_panel();
 }
 
 function onload(){

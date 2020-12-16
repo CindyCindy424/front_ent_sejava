@@ -1,26 +1,26 @@
 import api from "./../../api/api.js"
 
-function generate_book(book){
-    var book_template = '\
-        <div class="name"><span class="tag">有间自营</span>{{name}}</div>\
-        <div class="description">{{description}}</div>\
-        <div class="author">{{author}}</div>\
-        <div class="price-wrapper">\
-            <div class="hint">现价</div>\
-            <div class="price-a">{{price_b}}</div>\
-            <div class="hint">定价<span class="price-b">{{price_a}}</span></div>\
-        </div>\
-        '
+// function generate_book(book){
+//     var book_template = '\
+//         <div class="name"><span class="tag">有间自营</span>{{name}}</div>\
+//         <div class="description">{{description}}</div>\
+//         <div class="author">{{author}}</div>\
+//         <div class="price-wrapper">\
+//             <div class="hint">现价</div>\
+//             <div class="price-a">{{price_b}}</div>\
+//             <div class="hint">定价<span class="price-b">{{price_a}}</span></div>\
+//         </div>\
+//         '
 
-    book_template = book_template.replace('{{name}}', book.name)
-    book_template = book_template.replace('{{author}}', book.author)
-    book_template = book_template.replace('{{description}}', book.description)
-    book_template = book_template.replace('{{price_a}}', book.price_a.toFixed('2'))
-    book_template = book_template.replace('{{price_b}}', book.price_b.toFixed('2'))
+//     book_template = book_template.replace('{{name}}', book.name)
+//     book_template = book_template.replace('{{author}}', book.author)
+//     book_template = book_template.replace('{{description}}', book.description)
+//     book_template = book_template.replace('{{price_a}}', book.price_a.toFixed('2'))
+//     book_template = book_template.replace('{{price_b}}', book.price_b.toFixed('2'))
 
-    document.getElementsByClassName('cover')[0].style.backgroundImage="url("+book.img+")"
-    document.getElementById('book').innerHTML=book_template
-}
+//     document.getElementsByClassName('cover')[0].style.backgroundImage="url("+book.img+")"
+//     document.getElementById('book').innerHTML=book_template
+// }
 
 async function generate_page(id, user){
     //book
